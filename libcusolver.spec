@@ -96,6 +96,7 @@ sed -i \
 %{_includedir}/cusolverSp_LOWLEVEL_PREVIEW.h
 %{_libdir}/libcusolver.so
 %{_libdir}/libcusolverMg.so
+%{_libdir}/libcusolver_lapack_static.a
 %{_libdir}/liblapack_static.a
 %{_libdir}/libmetis_static.a
 %{_libdir}/pkgconfig/cusolver.pc
