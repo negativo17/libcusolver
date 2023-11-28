@@ -6,7 +6,7 @@
 
 Name:           libcusolver
 Epoch:          2
-Version:        11.5.2.141
+Version:        11.5.4.101
 Release:        1%{?dist}
 Summary:        NVIDIA cuSOLVER library
 License:        CUDA Toolkit
@@ -15,7 +15,7 @@ ExclusiveArch:  x86_64 ppc64le aarch64
 
 Source0:        https://developer.download.nvidia.com/compute/cuda/redist/%{name}/linux-x86_64/%{name}-linux-x86_64-%{version}-archive.tar.xz
 Source1:        https://developer.download.nvidia.com/compute/cuda/redist/%{name}/linux-ppc64le/%{name}-linux-ppc64le-%{version}-archive.tar.xz
-Source2:        https://developer.download.nvidia.com/compute/cuda/redist/%{name}/linux-aarch64/%{name}-linux-aarch64-%{version}-archive.tar.xz
+Source2:        https://developer.download.nvidia.com/compute/cuda/redist/%{name}/linux-sbsa/%{name}-linux-sbsa-%{version}-archive.tar.xz
 Source3:        cusolver.pc
 
 Requires(post): ldconfig
@@ -61,7 +61,7 @@ This package contains static libraries for NVIDIA cuSOLVER.
 %endif
 
 %ifarch aarch64
-%setup -q -T -b 2 -n %{name}-linux-aarch64-%{version}-archive
+%setup -q -T -b 2 -n %{name}-linux-sbsa-%{version}-archive
 %endif
 
 %install
@@ -105,6 +105,9 @@ sed -i \
 %{_libdir}/libcusolver_static.a
 
 %changelog
+* Tue Nov 28 2023 Simone Caronni <negativo17@gmail.com> - 2:11.5.4.101-1
+- Update to 11.5.4.101.
+
 * Thu Sep 28 2023 Simone Caronni <negativo17@gmail.com> - 2:11.5.2.141-1
 - Update to 11.5.2.141.
 
