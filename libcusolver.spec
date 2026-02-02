@@ -6,7 +6,7 @@
 
 Name:           libcusolver
 Epoch:          2
-Version:        12.0.4.66
+Version:        12.0.9.81
 Release:        1%{?dist}
 Summary:        NVIDIA cuSOLVER library
 License:        CUDA Toolkit
@@ -88,6 +88,9 @@ sed -i \
 %{_libdir}/libcusolver_static.a
 
 %changelog
+* Mon Feb 02 2026 Simone Caronni <negativo17@gmail.com> - 2:12.0.9.81-1
+- Update to 12.0.9.81.
+
 * Sun Oct 26 2025 Simone Caronni <negativo17@gmail.com> - 2:12.0.4.66-1
 - Update to 12.0.4.66.
 
